@@ -10,6 +10,7 @@ import {
   faDoorOpen,
   faPlus,
   faRotate,
+  faUserGroup,
 } from '@fortawesome/free-solid-svg-icons';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -27,7 +28,7 @@ export const SideBar = () => {
     },
     {
       id: 2,
-      icon: faUserGraduate,
+      icon: faUserGroup,
       name: 'Students',
       link: '/students',
       subItems: [
@@ -36,6 +37,12 @@ export const SideBar = () => {
           icon: faPlus,
           name: 'Add Students',
           link: '/students/add',
+        },
+        {
+          id: 2,
+          icon: faUserGraduate,
+          name: 'Student Report',
+          link: '/students/report',
         },
       ],
     },

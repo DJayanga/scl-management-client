@@ -1,6 +1,7 @@
 import { Button, Form, Input, Label } from 'reactstrap';
 import './AllocationForm.scss';
 import { useState } from 'react';
+import { CardWrapper } from '../cardWrapper/CardWrapper';
 
 export const AllocationForm = ({ title, fields, btnName, handleclick, children }) => {
   const [formData, setFormData] = useState({});
@@ -34,8 +35,7 @@ export const AllocationForm = ({ title, fields, btnName, handleclick, children }
   };
 
   return (
-    <div className="allocation-form mt-5">
-      <div className="form-title">{title}</div>
+    <CardWrapper title={title}>
       <div className="form-content">
         <Form onSubmit={handleSubmit}>
           {fields.map((field, index) => (
@@ -67,6 +67,6 @@ export const AllocationForm = ({ title, fields, btnName, handleclick, children }
         </Form>
       </div>
       <div className="child-data">{children}</div>
-    </div>
+    </CardWrapper>
   );
 };

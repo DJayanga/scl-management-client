@@ -1,0 +1,18 @@
+.card-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+}
+
+.card-wrapper-title {
+  position: absolute;
+  top: -13px;
+  left: 10px;
+  background-color: #f5f7ff;
+  padding: 0 10px;
+}
+
+.child-data {
+  margin-left: 10px;
+  margin-right: 10px;
+}

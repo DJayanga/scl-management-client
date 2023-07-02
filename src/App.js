@@ -12,6 +12,7 @@ import { AddSubject } from './pages/subjects/AddSubject';
 import { AddTeacher } from './pages/teachers/AddTeacher';
 import { AllocateSubjects } from './pages/teachers/AllocateSubjects';
 import { AllocateClassRooms } from './pages/teachers/AllocateClassRooms';
+import { SingleStudent } from './pages/students/SingleStudent';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route index element={<Students />} />
               <Route path=":id" element={<AddStudent />} />
               <Route path="add" element={<AddStudent />} />
+              <Route path="report" element={<SingleStudent />} />
             </Route>
             <Route path="subjects">
               <Route index element={<Subjects />} />
