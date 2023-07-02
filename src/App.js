@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Dashboard } from './pages/dashboard/Dashboard';
@@ -9,7 +9,9 @@ import { Teachers } from './pages/teachers/Teachers';
 import { AddClassRoom } from './pages/classRooms/AddClassRoom';
 import { AddStudent } from './pages/students/AddStudent';
 import { AddSubject } from './pages/subjects/AddSubject';
-import { Addteacher } from './pages/teachers/Addteacher';
+import { AddTeacher } from './pages/teachers/AddTeacher';
+import { AllocateSubjects } from './pages/teachers/AllocateSubjects';
+import { AllocateClassRooms } from './pages/teachers/AllocateClassRooms';
 
 function App() {
   return (
@@ -35,8 +37,10 @@ function App() {
             </Route>
             <Route path="teachers">
               <Route index element={<Teachers />} />
-              <Route path=":id" element={<Addteacher />} />
-              <Route path="add" element={<Addteacher />} />
+              <Route path=":id" element={<AddTeacher />} />
+              <Route path="add" element={<AddTeacher />} />
+              <Route path="allocate-subject" element={<AllocateSubjects />} />
+              <Route path="allocate-class" element={<AllocateClassRooms />} />
             </Route>
 
             <Route path="*" element={<div>404</div>} />

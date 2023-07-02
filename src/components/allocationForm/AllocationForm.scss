@@ -1,0 +1,22 @@
+.allocation-form {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+}
+
+.form-title {
+  position: absolute;
+  top: -13px;
+  left: 10px;
+  background-color: #f5f7ff;
+  padding: 0 10px;
+}
+
+.form-content {
+  padding: 20px;
+}
+
+.child-data {
+  margin-left: 10px;
+  margin-right: 10px;
+}
