@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { Layout } from '../../layout/Layout';
 import { FormComponent } from '../../components/form/FormComponent';
+import ApiCallHandler from '../../services/apicallHandler';
+import { useDispatch } from 'react-redux';
 
 export const AddSubject = () => {
+  const api = new ApiCallHandler();
+  const teacherDispatch = useDispatch();
+
   const [subData, setSubData] = useState({
     subjectId: '',
     subjectName: '',
@@ -20,7 +25,9 @@ export const AddSubject = () => {
   ];
 
   const handleSubmit = (formData) => {
-    // Handle form submission
+    // const response = api.post(endPoints.subjects, formData);
+    const subjectId = 1;
+    teacherDispatch({ type: 'subject/addSubject', payload: { ...formData, subjectId: subjectId } });
     console.log(formData);
   };
   return (

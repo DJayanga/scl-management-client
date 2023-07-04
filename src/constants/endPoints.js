@@ -1,0 +1,18 @@
+export const endPoints = {
+  students: '/students',
+  student: '/students/',
+  classRooms: '/classrooms',
+  classRoom: '/classrooms/',
+  teachers: '/teachers',
+  teacher: '/teachers/',
+  subjects: '/subjects',
+  subject: '/subjects/',
+  classRoomStudents: '/classrooms/students/',
+  classRoomTeachers: '/classrooms/teachers/',
+  classRoomSubjects: '/classrooms/subjects/',
+  teacherSubjects: '/teachers/subjects/',
+  subjectTeachers: '/subjects/teachers/',
+  subjectClassRooms: '/subjects/classrooms/',
+  studentClassRooms: '/students/classrooms/',
+  studentSubjects: '/students/subjects/',
+};

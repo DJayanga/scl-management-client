@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { Layout } from '../../layout/Layout';
-import { Button, Form, FormFeedback, FormGroup, FormText, Input, Label } from 'reactstrap';
 import { FormComponent } from '../../components/form/FormComponent';
+import ApiCallHandler from '../../services/apicallHandler';
+import { endPoints } from '../../constants/endPoints';
+import { useDispatch } from 'react-redux';
 
 export const AddStudent = () => {
+  const api = new ApiCallHandler();
+  const studentDispatch = useDispatch();
+
   const [stdData, setStdData] = useState({
     studentId: '',
     firstname: '',
@@ -92,7 +97,10 @@ export const AddStudent = () => {
   ];
 
   const handleSubmit = (formData) => {
-    // Handle form submission
+    // const response = api.post(endPoints.students, formData);
+    const stdId = 1;
+    studentDispatch({ type: 'student/addStudent', payload: { ...formData, studentId: stdId } });
+
     console.log(formData);
   };
   return (

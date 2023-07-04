@@ -1,13 +1,13 @@
+import { useSelector } from 'react-redux';
 import { TableComponent } from '../../components/table/TableComponent';
 import { Layout } from '../../layout/Layout';
 
 export const Subjects = () => {
   const tableHead = ['#', 'Subject Name'];
-  const tableBody = [
-    ['1', 'Subject 01'],
-    ['2', 'Subject 02'],
-    ['3', 'Subject 03'],
-  ];
+  const data = useSelector((state) => state?.subject);
+  const tableBody = data?.subjects?.map((subject, index) => {
+    return [index + 1, subject.subjectName];
+  });
   return (
     <Layout>
       <div className="m-3">
